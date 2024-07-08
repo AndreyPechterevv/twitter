@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${TWITTER_DB_USER}
+    password: ${TWITTER_DB_PASSWORD}
+    url: jdbc:postgresql://${TWITTER_DB_HOST}:5432/${TWITTER_DB_NAME}
+  config:
+    import: optional:file:.env[.properties]
+#  liquibase:
+#    enabled: true
+#    change-log: classpath:db/changelog/db.changelog-master.yaml
+#    default-schema: twitter
