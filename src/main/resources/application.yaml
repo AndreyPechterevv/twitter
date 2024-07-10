@@ -6,3 +6,9 @@ spring:
     url: jdbc:postgresql://${TWITTER_DB_HOST}:5432/${TWITTER_DB_NAME}
   config:
     import: optional:file:.env[.properties]
+  jpa:
+    properties:
+      hibernate.jdbc.time_zone: UTC
+      hibernate:
+        format_sql: true
+    show-sql: true
